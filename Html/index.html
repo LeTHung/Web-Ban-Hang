@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThePhoneZone</title>
+    <link rel="stylesheet" href="../Css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" href="../images/Main/logo.png" />
+  </head>
+  <body>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="top-header">
+        <!-- Bên trái -->
+        <div class="left">
+          <img src="/images/Main/logo.png" alt="Logo" class="logo" />
+          <button class="menu-btn">☰ Danh mục</button>
+          <input type="text" placeholder="Bạn cần tìm gì?" class="search-box" />
+        </div>
+        <!-- Bên phải -->
+        <div class="right">
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-user"></i> Tài khoản</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+            </li>
+            <li><a href="#" class="login-btn">Đăng nhập</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sub-header -->
+    <nav class="sub-header">
+      <ul>
+        <li>
+          <a href="#"><i class="fas fa-mobile"></i> Điện thoại</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-laptop"></i> Laptop</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-headphones"></i> Phụ kiện</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-tags"></i> Khuyến mãi</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Ảnh quảng cáo bên trái / phải -->
+    <div class="img-left">
+      <img src="../images/Banner/banner1.png" alt="QC trái" />
+    </div>
+    <div class="img-right">
+      <img src="../images/Banner/bn1.png" alt="QC phải" />
+    </div>
+
+    <!-- Flash Sale -->
+    <section class="FlashSale">
+      <div class="title_FS">
+        <h4>⚡ Flash Sale</h4>
+        <a href="#">Xem tất cả</a>
+      </div>
+      <div class="product-container-sales">
+        <div class="product-card" onclick="openModal()">
+          <img src="../images/Items/Iphone/iphone-11.png" alt="iphone-11" />
+          <p class="product-name">iPhone 15 Pro</p>
+          <p class="price">27.990.000đ</p>
+        </div>
+        <div class="product-card">
+          <img src="../images/Items/Iphone/iphone-13.png" alt="iphone-13" />
+          <p class="product-name">Samsung S24 Ultra</p>
+          <p class="price">26.490.000đ</p>
+        </div>
+        <div class="product-card">
+          <img
+            src="../images/Items/Samsung/dien-thoai-samsung-galaxy-a26.png"
+            alt="samsung-galaxy-a26"
+          />
+          <p class="product-name">Samsung</p>
+          <p class="price">18.990.000đ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner sản phẩm khác -->
+    <section class="Banner">
+      <div class="title_FS">
+        <h4>🔥 Sản phẩm mới</h4>
+        <a href="#">Xem tất cả</a>
+      </div>
+      <div class="product-container-sales">
+        <div class="product-card">
+          <img src="img/macbook.png" alt="Macbook" />
+          <p class="product-name">MacBook Pro M3</p>
+          <p class="price">44.990.000đ</p>
+        </div>
+        <div class="product-card">
+          <img src="img/ipad.png" alt="iPad" />
+          <p class="product-name">iPad Pro 2024</p>
+          <p class="price">28.990.000đ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal sản phẩm -->
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-header">
+          <div class="modal-images">
+            <img src="img/iphone.png" alt="iPhone" />
+          </div>
+          <div class="modal-info">
+            <h3>iPhone 15 Pro</h3>
+            <div class="modal-rating">
+              ⭐ 4.9 | <a href="#">Xem đánh giá</a>
+            </div>
+            <div class="modal-price">
+              <span class="price-discounted">27.990.000đ</span>
+              <span class="price-original">32.990.000đ</span>
+              <span class="discount-tag">-15%</span>
+            </div>
+            <div class="modal-promo">
+              <p>Ưu đãi</p>
+              <ul>
+                <li>Tặng ốp lưng cao cấp</li>
+                <li>Giảm thêm 1 triệu khi thanh toán qua ví</li>
+              </ul>
+            </div>
+            <button class="add-to-cart-btn">Thêm vào giỏ hàng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4>Về chúng tôi</h4>
+          <ul>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Hỗ trợ khách hàng</h4>
+          <ul>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Chính sách bảo hành</a></li>
+            <li><a href="#">Chính sách đổi trả</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Liên hệ</h4>
+          <ul>
+            <li>Email: cskh@thephonezone.com</li>
+            <li>Hotline: 1900 1009</li>
+          </ul>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+      function openModal() {
+        document.getElementById("productModal").style.display = "block";
+      }
+      function closeModal() {
+        document.getElementById("productModal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
